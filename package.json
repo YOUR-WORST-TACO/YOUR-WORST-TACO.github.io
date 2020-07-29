@@ -1,0 +1,29 @@
+{
+  "name": "unknown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "unkown"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "unknown"
+  },
+  "homepage": "unknown",
+  "devDependencies": {
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "node-sass": "latest"
+  },
+  "dependencies": {
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-cli": "latest"
+  }
+}
