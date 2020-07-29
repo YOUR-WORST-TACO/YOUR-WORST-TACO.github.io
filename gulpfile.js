@@ -6,21 +6,21 @@ const rename = require('gulp-rename');
 sass.compiler = require('node-sass');
 
 gulp.task('sass', () => {
-    gulp.src('Styles/**/*.scss')
+    gulp.src('styles/scss/**/*.scss')
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-        .pipe(gulp.dest('wwwroot/css/'));
-    return gulp.src('Styles/**/*.scss')
+        .pipe(gulp.dest('styles'));
+    return gulp.src('styles/scss/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename('main.min.css'))
-        .pipe(gulp.dest('wwwroot/css/'));
+        .pipe(gulp.dest('styles'));
 });
 
 gulp.task('sass:clean', () => {
     return del([
-        'css/main.css',
+        'styles/main.css',
     ]);
 });
 
 gulp.task('sass:watch', () => {
-    gulp.watch('Styles/**/*.scss', gulp.series('sass'));
+    gulp.watch('styles/scss/**/*.scss', gulp.series('sass'));
 });
